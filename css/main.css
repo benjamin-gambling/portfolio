@@ -1,0 +1,385 @@
+:root {
+    --main-body: #1b232b;          /*	(27,35,43)*/
+    --main-nav: #ffffff;            /*(255,255,255)*/
+    --main-nav-background: rgba(255,255,255,0.55);                   
+    --main-me: #dde5f4;            /*(221,229,244)*/
+    --main-me-background: rgba(221,229,244,1);
+    --main-work: #b1c4d8;          /*(177,196,216)*/
+    --main-contact: #668eab;       /*(102,142,171)*/
+    --main-footer: #1b232b;        /*	(27,35,43)*/
+    --main-code: #ffffff;          /*(255,255,255)*/
+  }
+  
+  /* Base reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box; /* Follow up */
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  /* 1200px / 16px = 75em */
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  /* BASE STYLES */
+  body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--main-body);  
+  }
+  
+  h1,
+  h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+    
+  h1 {
+    font-size: 6rem; /* 60x */
+  }
+  
+  h2 {
+    font-size: 4.2rem; /* 42px */
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-body);
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  
+  /* NAV */
+  
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(255,255,255,0.70) 0%, rgba(255,255,255,1) 98%),url(https://user-images.githubusercontent.com/63812083/80144694-d7fa8f00-8563-11ea-8cd5-7b607d82250d.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom: 1px solid rgba(27,35,43, 0.85);
+    z-index: 10; 
+  }
+  
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+  }
+   
+  @media (max-width: 28.75em) {
+    .nav {
+      justify-content: center;
+    }
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    transition: all 1s ease-out;
+  }
+  
+  #wel:hover, #pro:hover, #con:hover {
+    font-size: 2.3rem;
+    font-weight: 700;  
+  }
+  
+  
+  
+  /* WELCOME SECTION */
+  
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-me);
+    background-image: linear-gradient(to bottom, var(--main-nav-background) 0%, var(--main-nav) 100%),url(https://user-images.githubusercontent.com/63812083/80137507-3e79b000-8558-11ea-9935-875cc9ff549c.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: backgroundimg;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 45s;
+  }
+  
+  @keyframes backgroundimg{
+    0%, 100%  {background-image: linear-gradient(to bottom, var(--main-nav-background) 0%, var(--main-nav) 100%),url(https://user-images.githubusercontent.com/63812083/80137507-3e79b000-8558-11ea-9935-875cc9ff549c.jpg)}
+    33%  {background-image: linear-gradient(to bottom, var(--main-nav-background) 0%, var(--main-nav) 100%),url(https://user-images.githubusercontent.com/63812083/80153256-0b441a80-8572-11ea-8f61-ba20b3f97e84.JPG)}
+    66%  {background-image: linear-gradient(to bottom, var(--main-nav-background) 0%, var(--main-nav) 100%),url(https://user-images.githubusercontent.com/63812083/80153275-1008ce80-8572-11ea-969a-c342defbf7d3.jpg)}
+  }
+  .welcome-section > h1 {
+    margin: 110px 0px 0px 0px;
+    font-weight: 700;
+  }
+  
+  .welcome-section > p {
+    font-weight: 500;
+    margin: 25px 0px 0px 0px;
+    color: var(--main-footer);
+    text-shadow: 0 0.1px 0 var(--main-footer);
+  }
+  
+  #job {
+   font-style: italic;
+   font-size: 3rem;
+  }
+  
+  #location, .location {
+    font-size: 2.5rem;
+    transition: all 10s ease-out;
+  }
+  #location:hover,.location:hover {
+    font-size: 4rem;
+  }
+  
+  @media (max-width: 650px){
+   .welcome-section > h1 {
+      font-size: 5rem;
+    }
+    #job {
+      font-size: 3rem;
+    }
+    #location, .location {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 425px){
+   .welcome-section > h1 {
+      font-size: 4.5rem;
+    }
+    #job {
+      font-size: 2.5rem;
+    }
+    #location, .location {
+    font-size: 2rem;
+  }
+  @media (max-width: 385px){
+   .welcome-section > h1 {
+      font-size: 3.75rem;
+    }
+    #job {
+      font-size: 2.25rem;
+    }
+    #location, .location {
+    font-size: 2rem;
+  }
+  
+  /* PROJECTS*/
+  
+  .projects-section {
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 0rem 2rem;
+    /* background was here */
+    background-image: linear-gradient(180deg, var(--main-nav) 0%, var(--main-nav) 100%);
+  }
+  
+  .projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 10rem auto;
+  }
+  
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 650px){
+   .projects-section-header {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* "Automagic" image grid using no media queries */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+  
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .project {
+    background: var(--main-footer);
+    color:var(--main-nav);
+    border-radius: 2px;
+    
+    
+  }
+  
+  .code {
+    color: var(--main-footer);
+    transition: color 1.5s ease-out;
+  }
+  .project:hover .code {
+    color: var(--main-code);
+    font-size: 2.3rem;
+  }
+  
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    /* border: 1.5px solid var(--main-footer);*/
+  }
+  
+  .project-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding: 2rem 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    font-weight: 500;
+    padding: 2rem 2rem;
+    border-radius: 2px;
+    font-size: 2.2rem;
+    background: var(--main-footer);
+    color:var(--main-nav);
+    /* transition: background 0.3s ease-out; */
+    margin-left: 10px;
+    transition: all 2s ease-out;
+  }
+  
+  .btn:hover {
+    background: var(--main-nav);
+    color: var(--main-footer);
+    font-weight: 700;
+    font-size:2.3rem;
+  }
+  
+  
+  /* CONTACT */
+  
+  .contact-section {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    height: 40vh;
+    padding: 0rem 0rem; /* Doesn't do anything */
+    color: var(--main-nav);
+    background-image: linear-gradient(to bottom, var(--main-nav) 0%, var(--main-footer)10%);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 4.5rem;
+    margin-top: 70px
+  }
+  
+  .contact-section-header > p {
+    font-style: italic;
+    
+  }
+  
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 610px){
+    .contact-section {
+      height:450px;
+      flex-direction:column;
+  }
+    .contact-links {
+      margin-bottom: 10px;
+      flex-direction:column;
+    }
+  }
+  
+  @media (max-height: 500px){
+    .contact-section {
+      height:auto;
+    }
+    .contact-links {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    color:var(--main-nav);
+    background: var(--main-footer);
+    border-top: 1px solid var(--main-nav);
+  }
