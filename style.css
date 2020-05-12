@@ -186,35 +186,40 @@
     font-size: 4rem;
   }
   
-  @media (max-width: 650px){
-   .welcome-section > h1 {
-      font-size: 5rem;
-    }
-    #job {
-      font-size: 3rem;
-    }
-    #location, .location {
+@media (max-width: 650px){
+ .welcome-section > h1 {
+    font-size: 5rem;
+  }
+  #job {
+    font-size: 3rem;
+  }
+  #location, .location {
+  font-size: 2.5rem;
+}
+  }
+
+@media (max-width: 425px){
+ .welcome-section > h1 {
+    font-size: 4.5rem;
+  }
+  #job {
     font-size: 2.5rem;
   }
-  @media (max-width: 425px){
-   .welcome-section > h1 {
-      font-size: 4.5rem;
-    }
-    #job {
-      font-size: 2.5rem;
-    }
-    #location, .location {
-    font-size: 2rem;
+  #location, .location {
+  font-size: 2rem;
+}
   }
-  @media (max-width: 385px){
-   .welcome-section > h1 {
-      font-size: 3.75rem;
-    }
-    #job {
-      font-size: 2.25rem;
-    }
-    #location, .location {
-    font-size: 2rem;
+  
+@media (max-width: 385px){
+ .welcome-section > h1 {
+    font-size: 3.75rem;
+  }
+  #job {
+    font-size: 2.25rem;
+  }
+  #location, .location {
+  font-size: 2rem;
+}
   }
   
   /* PROJECTS*/
